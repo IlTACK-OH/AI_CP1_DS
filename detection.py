@@ -18,7 +18,7 @@ def run(
     onnx_path = ROOT / 'models/test.onnx',
     source = ROOT / 'data',
     output = ROOT/ 'results',
-    conf = 0.4
+    conf = 0.25
 ):
     start = time.time()
     
