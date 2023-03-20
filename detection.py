@@ -38,6 +38,8 @@ def run(
             video_detect(net = net, video_path = file_path, output_path=output_path, conf = conf)
         elif file_path.endswith(".jpg") or file_path.endswith(".png"):
             img_predict(net = net, image_path = file_path, output_path=output_path, conf = conf)
+        else:
+            print(f"\rSorry, we only support .png, .jpg, and .mp4 formats.Pleas check this file: {filename}")
     
         n += 1
         print(f"\rNow complete: {n}/{num}",end=" ")
