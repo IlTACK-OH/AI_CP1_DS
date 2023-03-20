@@ -9,7 +9,7 @@ NMS_THRESHOLD = 0.45
 
 # Text parameters.
 FONT_FACE = cv2.FONT_HERSHEY_SIMPLEX
-FONT_SCALE = 1.2
+FONT_SCALE = 0.8
 THICKNESS = 2
  
 # Colors.
