@@ -4,7 +4,8 @@
 ### 프로젝트 목표
 주어진 도로 이미지 또는 영상 데이터에서 과적차량과 정상차량을 탐지해내는 것.
 ### 사용 Stacks
-
+ <div style="margin: 0 auto; text-align: center;" align= "center"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"><img src="https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=Numpy&logoColor=white">
+          </div>
 
 # Conda 및 Python 환경
 - Conda version: 23.1.0
