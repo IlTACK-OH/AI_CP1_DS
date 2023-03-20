@@ -15,7 +15,7 @@ import cv2
 from utils.video import video_detect
 from utils.image import img_predict
 def run(
-    onnx_path = ROOT / 'models/best.onnx',
+    onnx_path = ROOT / 'models/test.onnx',
     source = ROOT / 'data',
     output = ROOT/ 'results',
     conf = 0.4
@@ -39,7 +39,7 @@ def run(
 
 def parse_opt():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--onnx_path', type=str, default=ROOT / 'models/best.onnx')
+    parser.add_argument('--onnx_path', type=str, default=ROOT / 'models/test.onnx')
     parser.add_argument('--source', type=str, default= ROOT / 'data')
     parser.add_argument('--output', type=str, default= ROOT/ 'results')
     parser.add_argument('--conf', type=float, default= 0.25)
