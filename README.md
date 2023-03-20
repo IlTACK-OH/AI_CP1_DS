@@ -68,8 +68,8 @@ cd AI_CP1_DS
 pip install -r requirements.txt
 python detection.py --onnx_path [가중치 파일 경로] --source [데이터 파일 경로] --output [결과 저장파일 경로] --conf [confidence threshold]
 ```
-사용의 편의를 위하여 모델의 가중치와 데이터 파일의 경로 그리고 저장될 경로, confidence score까지 사용자가 조작할 수 있게 구성하였습니다.<br>
- 그리고 각 인수가 의미하는 바는 다음과 같습니다.
+사용의 편의를 위하여 모델의 가중치와 데이터 파일의 경로 그리고 저장될 경로, confidence score까지 사용자가 조작할 수 있게 구성하였습니다.<br><br>
+그리고 각 인수가 의미하는 바는 다음과 같습니다.
 - onnx_path: onnx형식의 가중치 파일이 저장된 파일 경로를 입력합니다. (default: ./models/test.onnx)
 - source: 객체 탐지를 진행하고자 하는 데이터 폴더의 경로를 입력합니다. (default: ./data) 
 - output: 탐지 결과 파일을 저장할 폴더 경로입니다. (default: ./results)
@@ -81,9 +81,6 @@ python detection.py --onnx_path [가중치 파일 경로] --source [데이터 �
  ```
 ### 사용예시
 ```
-git clone https://github.com/IlTACK-OH/AI_CP1_DS.git
-cd AI_CP1_DS
-pip install -r requirements.txt
 python detection.py --onnx_path C:\users\model\test.onnx  --source C:\users\data --output C:\users\results --conf 0.3
 ```
 만일 위와 같이 입력했다면 다음을 의미합니다.
@@ -92,8 +89,9 @@ python detection.py --onnx_path C:\users\model\test.onnx  --source C:\users\data
 3. 예측의 결과는 C:\users\results에 저장됩니다.
 <br>
 굳이 가중치 파일이나, 데이터 폴더 등을 해당 프로젝트의 디렉토리 안으로 가져올 필요가 없으며, 저장될 경로 역시 지정만 정확히 한다면 원하는 곳에 저장할 수 있습니다.
+
  # ❗ 안내사항
- - `--source`의 인수는 반드시 `폴더`이어야 합니다. 그리고 그 폴더에는 오로지 예측 시 사용할 데이터만 들어있어야 합니다.
+ - `--source`의 인수는 반드시 `폴더`의 경로이어야 합니다! 그리고 그 폴더에는 오로지 예측 시 사용할 데이터만 들어있어야 합니다.
  - 파일 형식은 `.jpg`,`.png`, `.mp4`형식만 지원합니다.
  - 아직 openCV CUDA가속을 구현하지 못하여 CPU를 이용해 예측을 진행합니다. 따라서 영상의 길이가 긴 경우 시간이 오래 소요될 수 있습니다.
  - 만일 사용 중 오류가 발생하거나 사용 중 의문사항이 생기시면 `issues`탭을 통하여 글을 남겨주시길 바랍니다.
