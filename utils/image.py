@@ -95,5 +95,4 @@ def img_predict(net, image_path, output_path, conf):
                 cv2.putText(img, label, (left, top + dim[1]), FONT_FACE, FONT_SCALE, WHITE, THICKNESS, cv2.LINE_AA)        
      
     # 결과 이미지 저장
-    cv2.imwrite(output_path, img)  
-    print(f"⭐️complete!!!⭐️ image is store in {output_path}")
+    cv2.imwrite(output_path, img) 

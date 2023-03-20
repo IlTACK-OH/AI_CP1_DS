@@ -113,8 +113,6 @@ def video_detect(net, video_path, output_path, conf):
                     cv2.putText(img, label, (left, top + dim[1]), FONT_FACE, FONT_SCALE, WHITE, THICKNESS, cv2.LINE_AA)        
         # Write frame to output video
         out.write(img)
-        print(f"\rObject detection in progress❗️ Time taken:{round(time.time() - start, 2)}",end="")
     # Release resources
     cap.release()
     out.release()
-    print(f"    ⭐️complete!!!⭐️ Video is store in{output_path}")

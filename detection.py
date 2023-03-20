@@ -25,16 +25,24 @@ def run(
     # yolov5 모델 로드
     net = cv2.dnn.readNet(onnx_path)
 
+    num = len(os.listdir(source))
+    n = 0
+    print("Starts the object detection process.")
+    print(f"\rNow complete: {n}/{num}",end =" ")
+    
     for filename in os.listdir(source):   
         file_path = os.path.join(source, filename)
         output_path = os.path.join(output, filename)
         
         if file_path.endswith(".mp4"):
             video_detect(net = net, video_path = file_path, output_path=output_path, conf = conf)
-            pass
         elif file_path.endswith(".jpg") or file_path.endswith(".png"):
             img_predict(net = net, image_path = file_path, output_path=output_path, conf = conf)
-        
+    
+        n += 1
+        print(f"\rNow complete: {n}/{num}",end=" ")
+    
+    print(f"\n⭐️complete!!!⭐️ store in {output}")
     print(f"Wall time: {int((time.time()-start)//60)}min {(int(time.time()-start)%60)}s")
 
 def parse_opt():
