@@ -3,6 +3,8 @@
 # <div align="center">AI_CP1_DS: 과적차량 탐지🚛</div>
 ### 프로젝트 목표
 주어진 도로 이미지 또는 영상 데이터에서 과적차량과 정상차량을 탐지해내는 것.
+### 사용 Stacks
+
 
 # Conda 및 Python 환경
 - Conda version: 23.1.0
