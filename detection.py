@@ -24,10 +24,16 @@ def run(
     
     # yolov5 모델 로드
     net = cv2.dnn.readNet(onnx_path)
-
+    
+    if cv2.cuda.getCudaEnabledDeviceCount():
+        net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+        net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+        print("Starts the object detection process. Use GPU")
+    
+    else:
+        print("Starts the object detection process. Use CPU")
     num = len(os.listdir(source))
     n = 0
-    print("Starts the object detection process.")
     print(f"\rNow complete: {n}/{num}",end =" ")
     
     for filename in os.listdir(source):   
