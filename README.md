@@ -34,7 +34,8 @@
 │   └── image.py
 │   └── video.py
 ├── detection.py
-└── requirements.txt
+├── requirements.txt
+└── make_model.ipynb
  ```
 -  `.gitignore`과 `README.md`는 따로 표시하지 않음.
 
@@ -59,6 +60,8 @@ models 내 모델을 통하여 이미지 또는 영상 내 객체를 탐지하�
  해당 파일은 utils의 모듈과 models 내 저장된 모델을 이용하여 객체 탐지를 진행하는 파일이다.<br>터미널에서 실행할 수 있도록 구성되어 있습니다.
 ### ✏ requirements.txt
  프로젝트에 필요한 패키지 파일들이 필요한지 작성되어 있습니다.
+### ✏ make_model.ipynb
+ 모델 제작 과정을 볼 수 있습니다.
 
 # Conda 및 Python 환경
 - Conda version: 23.1.0
